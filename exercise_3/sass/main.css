@@ -1,0 +1,24 @@
+body {
+  background-color: #eee;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+.top-nav {
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom-nav {
+  display: inline-flex;
+  font-family: monospace;
+  width: 100%;
+  padding: 3px;
+  justify-content: space-between;
+  background-color: #aaa;
+}
+.bottom-nav div {
+  background-color: #fff;
+}

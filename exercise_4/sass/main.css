@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  background-color: pink;
+}
+.contentA {
+  background-color: yellow;
+}
+.contentB {
+  background-color: blue;
+}
