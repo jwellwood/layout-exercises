@@ -1,0 +1,26 @@
+@import 'variables';
+
+// Change increment value in variables for different results
+@mixin darken($base-color) {
+  @for $i from 1 through 4 {
+    .dark-#{$i} {
+      background-color: darken($color: $base-color, $amount: $i * $increment);
+    }
+  }
+}
+
+@mixin lighten($base-color) {
+  @for $i from 1 through 4 {
+    .light-#{$i} {
+      background-color: lighten($color: $base-color, $amount: $i * $increment);
+    }
+  }
+}
+
+@mixin spectrum($color) {
+  .base {
+    background-color: $color;
+  }
+  @include darken($color);
+  @include lighten($color);
+}

@@ -1,11 +1,39 @@
+@import 'variables';
+@import 'mixins';
+
 body {
   background-color: #eee;
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-div {
-  margin: 0 auto;
-  border: solid 1px black;
-  width: 50px;
-  height: 100px;
-  display: inline-block;
+.container {
+  margin: 20vh auto;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  div {
+    margin: 10px auto;
+    border: solid 1px black;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.first {
+  @include spectrum($color-one);
+}
+
+.second {
+  @include spectrum($color-two);
+}
+
+.third {
+  @include spectrum($color-three);
 }
