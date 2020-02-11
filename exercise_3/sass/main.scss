@@ -1,26 +1,48 @@
+@import 'variables';
+@import 'mixins';
+
 body {
-  background-color: #eee;
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-  font-family: sans-serif;
+  @include init-body;
+}
+
+.container {
+  @include flex-container(column, flex-start);
 }
 
 .top-nav {
-  background-color: pink;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-container(row, space-between);
+  background-color: $primary-color;
+  padding: 0px 5px;
 }
 
 .bottom-nav {
-  display: inline-flex;
-  font-family: monospace;
-  width: 100%;
+  @include flex-container(row, space-evenly);
+  font-family: $secondary-font;
+  background-color: $secondary-color;
   padding: 3px;
-  justify-content: space-between;
-  background-color: #aaa;
   div {
     background-color: #fff;
+    width: 100%; // width of items is consistent
+    margin: 1px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #lemoncode {
+    visibility: hidden; // Remove the title
+  }
+  .container {
+    justify-content: space-between; // Push the bottom nav to the bottom of the page
+  }
+  .middle {
+    flex-grow: 1;
+  }
+  .bottom-nav {
+    padding: 1px;
+    div {
+      width: auto; // set width of items to the width of their content
+      font-size: 0.7rem; // allow the words to fit
+      padding: 0px 2px;
+    }
   }
 }
