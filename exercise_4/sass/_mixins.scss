@@ -1,0 +1,28 @@
+@import 'variables';
+
+@mixin grid-area-small($nav-size, $a, $b) {
+  width: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: $nav-size $a $b;
+  grid-template-areas:
+    'navbar'
+    'item-a'
+    'item-b';
+}
+
+@mixin grid-area-large($width) {
+  width: $width;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'navbar item-a item-a'
+    'navbar item-b item-b';
+}
+
+@mixin flex-text($dir, $justify, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-content: center;
+  align-items: $align;
+}

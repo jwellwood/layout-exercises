@@ -1,15 +1,54 @@
+@import 'variables';
+@import 'mixins';
+
 body {
   margin: 0;
   padding: 0;
 }
 
-.nav {
-  background-color: pink;
+.container {
+  display: grid;
+  margin: auto;
+  height: 100vh;
+  @include grid-area-large(90vw);
 }
 
-.contentA {
-  background-color: yellow;
+.item-nav {
+  grid-area: navbar;
+  background-color: $nav-color;
+  @include flex-text(column, space-around, flex-start);
 }
-.contentB {
-  background-color: blue;
+
+.item-a {
+  grid-area: item-a;
+  background-color: $primary-color;
+}
+.item-b {
+  grid-area: item-b;
+  background-color: $secondary-color;
+}
+
+// Extra large screen has more white space to left and right
+@media only screen and (min-width: 1140px) {
+  .container {
+    @include grid-area-large(75vw);
+  }
+}
+// Medium screen has larger nav element, with a/b taking the remaining space evenly
+@media only screen and (max-width: 650px) {
+  .container {
+    @include grid-area-small(1fr, 2fr, 2fr);
+  }
+  .item-nav {
+    @include flex-text(row, space-evenly);
+  }
+}
+// Smallest screen has auto nav height
+@media only screen and (max-width: 476px) {
+  .container {
+    @include grid-area-small(auto, 1fr, 1fr);
+  }
+  .item-nav {
+    @include flex-text(row, flex-start);
+  }
 }
