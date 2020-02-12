@@ -1,12 +1,12 @@
 @import 'variables';
 
-@mixin init-body {
-  padding: 0;
-  margin: 0;
+@mixin container {
+  min-height: 100vh;
   text-transform: uppercase;
   font-family: $primary-font;
-  min-height: 100vh;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 @mixin flex-container($dir, $justify) {

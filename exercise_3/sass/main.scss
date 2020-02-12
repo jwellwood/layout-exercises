@@ -2,7 +2,7 @@
 @import 'mixins';
 
 body {
-  @include init-body;
+  @include container;
 }
 
 .container {
@@ -41,7 +41,7 @@ body {
     padding: 1px;
     div {
       min-width: auto; // set width of items to the width of their content
-      font-size: 0.7rem; // allow the words to fit
+      font-size: 0.55rem;
       padding: 0px 2px;
     }
   }
