@@ -1,17 +1,44 @@
-@import 'variables';
 @import 'mixins';
+// Change the theme import to see the differences
+@import 'themes/theme-one';
+// @import 'themes/theme-two';
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.container {
+  padding: 10vh;
 }
 
 .colors {
   div {
-    height: 60px;
-    width: 110px;
-    border: 1px solid black;
-    padding: 20px;
+    @include boxOutline($radius);
   }
+}
+
+.base {
+  background-color: $primary;
+}
+
+.important {
+  background-color: $important;
+}
+.warning {
+  background-color: $warning;
+}
+
+.primary {
+  font-family: $primary-font;
+}
+.secondary {
+  font-family: $secondary-font;
+}
+
+.box {
+  @include boxOutline($radius);
+  @include boxShadow($shadow);
 }

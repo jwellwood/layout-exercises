@@ -1,0 +1,11 @@
+$primary: hsl(0, 100%, 50%);
+$important: hsl(0, 100%, 25%);
+$warning: hsl(0, 100%, 85%);
+$primary-font: Arial, Helvetica, sans-serif;
+$secondary-font: 'Lucida Console', Monaco, monospace;
+$radius: 0px;
+$shadow: -10px 10px 10px
+  rgba(
+    $color: #000,
+    $alpha: 0.8
+  );

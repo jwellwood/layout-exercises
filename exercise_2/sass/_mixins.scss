@@ -1,1 +1,11 @@
-@import 'variables';
+@mixin boxOutline($radius: 0) {
+  height: 60px;
+  width: 110px;
+  border: 1px solid #666;
+  padding: 20px;
+  border-radius: $radius;
+}
+
+@mixin boxShadow($shadow) {
+  box-shadow: $shadow;
+}
